@@ -1,0 +1,12 @@
+C:\Users\Camez\source\repos\Coppel_Rinku\Contracts\bin\Debug\Contracts.dll.config
+C:\Users\Camez\source\repos\Coppel_Rinku\Contracts\bin\Debug\Contracts.dll
+C:\Users\Camez\source\repos\Coppel_Rinku\Contracts\bin\Debug\Contracts.pdb
+C:\Users\Camez\source\repos\Coppel_Rinku\Contracts\bin\Debug\EntityFramework.dll
+C:\Users\Camez\source\repos\Coppel_Rinku\Contracts\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Camez\source\repos\Coppel_Rinku\Contracts\bin\Debug\EntityFramework.xml
+C:\Users\Camez\source\repos\Coppel_Rinku\Contracts\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Camez\source\repos\Coppel_Rinku\Contracts\obj\Debug\Contracts.csproj.AssemblyReference.cache
+C:\Users\Camez\source\repos\Coppel_Rinku\Contracts\obj\Debug\Contracts.csproj.CoreCompileInputs.cache
+C:\Users\Camez\source\repos\Coppel_Rinku\Contracts\obj\Debug\Contracts.csproj.CopyComplete
+C:\Users\Camez\source\repos\Coppel_Rinku\Contracts\obj\Debug\Contracts.dll
+C:\Users\Camez\source\repos\Coppel_Rinku\Contracts\obj\Debug\Contracts.pdb
