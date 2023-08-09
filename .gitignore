@@ -1,0 +1,23 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Coppel_Rinku_V1/v17/.wsuo
+/.vs/Coppel_Rinku/FileContentIndex/78a50cc5-00f5-4ad2-9dd0-8738139ac958.vsidx
+/.vs/Coppel_Rinku/FileContentIndex/808bc0ca-b40b-4c1b-bd9d-2b97c92bc30d.vsidx
+/.vs/Coppel_Rinku/FileContentIndex/a992fb5d-1b0d-4510-b957-71d3528abe36.vsidx
+/.vs/Coppel_Rinku/FileContentIndex/d39393f1-5a42-41d5-8ab5-b4ec27ed92fd.vsidx
+/.vs/Coppel_Rinku/FileContentIndex/ec4a2cc7-5bdf-41fb-893e-fa2a85112dfb.vsidx
+/.vs/Coppel_Rinku/FileContentIndex/fef43f82-cabe-48f9-ae5c-51ab5f019286.vsidx
+/.vs/Coppel_Rinku/FileContentIndex/1288d870-715c-441c-8fbb-e786969b2893.vsidx
+/.vs/Coppel_Rinku/FileContentIndex/3ffe0aab-2026-485e-9d6a-c8ba158a2b8c.vsidx
+/API_Rinku/obj/Debug/API_Rinku.csproj.AssemblyReference.cache
+/API_Rinku/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/CommonBase/obj/Debug/CommonBase.csproj.AssemblyReference.cache
+/CommonBase/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Contracts/obj/Debug/Contracts.csproj.AssemblyReference.cache
+/Contracts/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Models/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Models/obj/Debug/Models.csproj.AssemblyReference.cache
+/Services/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Services/obj/Debug/Services.csproj.AssemblyReference.cache
