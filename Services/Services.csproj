@@ -51,9 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\CatalogueDAO.cs" />
     <Compile Include="DAO\EmployeeDAO.cs" />
+    <Compile Include="DAO\ProcessDAO.cs" />
+    <Compile Include="DomainObject\CatalogueDomainObject.cs" />
     <Compile Include="DomainObject\EmployeeDomainObject.cs" />
+    <Compile Include="DomainObject\ProcessDomainObject.cs" />
+    <Compile Include="Manager\CatalogueManager.cs" />
     <Compile Include="Manager\EmployeeManager.cs" />
+    <Compile Include="Manager\ProcessManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoredProcedures\SP.Designer.cs">
       <AutoGen>True</AutoGen>

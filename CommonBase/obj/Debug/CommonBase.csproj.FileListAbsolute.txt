@@ -1,6 +1,0 @@
-C:\Users\Camez\source\repos\Coppel_Rinku\CommonBase\bin\Debug\CommonBase.dll
-C:\Users\Camez\source\repos\Coppel_Rinku\CommonBase\bin\Debug\CommonBase.pdb
-C:\Users\Camez\source\repos\Coppel_Rinku\CommonBase\obj\Debug\CommonBase.csproj.AssemblyReference.cache
-C:\Users\Camez\source\repos\Coppel_Rinku\CommonBase\obj\Debug\CommonBase.csproj.CoreCompileInputs.cache
-C:\Users\Camez\source\repos\Coppel_Rinku\CommonBase\obj\Debug\CommonBase.dll
-C:\Users\Camez\source\repos\Coppel_Rinku\CommonBase\obj\Debug\CommonBase.pdb

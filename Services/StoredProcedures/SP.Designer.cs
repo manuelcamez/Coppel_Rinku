@@ -61,11 +61,56 @@ namespace Services.StoredProcedures {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Get_EmployeeById.
+        /// </summary>
+        internal static string Get_EmployeeById {
+            get {
+                return ResourceManager.GetString("Get_EmployeeById", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a GetAll_Months.
+        /// </summary>
+        internal static string GetAll_Months {
+            get {
+                return ResourceManager.GetString("GetAll_Months", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a GetAll_Rol.
+        /// </summary>
+        internal static string GetAll_Rol {
+            get {
+                return ResourceManager.GetString("GetAll_Rol", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Save_Employee.
         /// </summary>
         internal static string Save_Employee {
             get {
                 return ResourceManager.GetString("Save_Employee", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Save_Movement.
+        /// </summary>
+        internal static string Save_Movement {
+            get {
+                return ResourceManager.GetString("Save_Movement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Update_Employee.
+        /// </summary>
+        internal static string Update_Employee {
+            get {
+                return ResourceManager.GetString("Update_Employee", resourceCulture);
             }
         }
     }

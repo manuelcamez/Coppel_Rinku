@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace Contracts.Response
 {
-    public class EmployeeResponse
+    public class MonthResponse
     {
-        public Int64 Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
-        public Decimal HourlyWage { get; set; }
-        public Int64 RolId { get; set; }
-        public string Rol { get; set; }
     }
 }

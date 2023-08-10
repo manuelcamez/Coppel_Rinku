@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Cont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{23AD09C1-2AB1-44F3-A914-1917A07781B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Rinku", "WPF_Rinku\WPF_Rinku.csproj", "{7ACFA262-8873-4137-97F8-72E956C7EAE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{23AD09C1-2AB1-44F3-A914-1917A07781B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23AD09C1-2AB1-44F3-A914-1917A07781B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23AD09C1-2AB1-44F3-A914-1917A07781B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ACFA262-8873-4137-97F8-72E956C7EAE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ACFA262-8873-4137-97F8-72E956C7EAE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ACFA262-8873-4137-97F8-72E956C7EAE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ACFA262-8873-4137-97F8-72E956C7EAE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,58 @@
+﻿<Window x:Class="WPF_Rinku.Views.Help"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        mc:Ignorable="d" 
+        Title="AYUDA" Height="360" Width="450" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Background>
+        <SolidColorBrush Color="#00a9e0"/>
+    </Window.Background>
+    <StackPanel>
+        <Grid HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="350" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+            </Grid.RowDefinitions>
+            <Separator Width="60" Background="Transparent"/>
+            <GroupBox Margin="0,10,-21,-90" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                <GroupBox.Header>
+                    <Label Foreground="White">DETALLE VENCIDO PRESTAMOS PLAZOS 18 Y 24</Label>
+                </GroupBox.Header>
+                <Border CornerRadius="6" BorderBrush="#f8f9fa" Background="#f8f9fa" BorderThickness="2" DockPanel.Dock="Top">
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
+                            <Separator Height="20" Width="80" Background="Transparent"/>
+                            <TextBlock TextAlignment="Center" Text="Área Responsable:" />
+                            <TextBlock TextAlignment="Center" Text="Cartera Operación Central" FontWeight="Bold" />
+                            <Separator Height="20" Width="80" Background="Transparent"/>
+                            <TextBlock TextAlignment="Center" Text="Nombre de los Reportes: " />
+                            <TextBlock Name="txArchivos" TextWrapping="Wrap" TextAlignment="Center" />
+
+                            <Separator Height="20" Width="80" Background="Transparent"/>
+                            <TextBlock TextAlignment="Center" Text="Ruta: " />
+                            <TextBlock Name="txPathFile" TextAlignment="Center" />
+                            <Separator Height="20" Width="80" Background="Transparent"/>
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </Border>
+            </GroupBox>
+        </Grid>
+        <Separator Height="89" Background="Transparent"/>
+        <ToolBar ToolBarTray.IsLocked="True" HorizontalAlignment="Stretch" >
+            <ToolBar.Resources>
+                <Style TargetType="{x:Type ToolBarPanel}">
+                    <Setter Property="Orientation" Value="Vertical"/>
+                </Style>
+            </ToolBar.Resources>
+
+            <DockPanel>
+                <Label FontSize="10" HorizontalAlignment="Right" Content="F3-CERRAR" ></Label>
+            </DockPanel>
+
+        </ToolBar>
+    </StackPanel>
+</Window>
