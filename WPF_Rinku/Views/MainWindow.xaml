@@ -1,76 +1,12 @@
 ﻿<Window x:Class="WPF_Rinku.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-        xmlns:local="clr-namespace:WPF_Rinku" 
-        mc:Ignorable="d" 
-       Title="Nomina Rinku" Height="370" Width="570" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
-    <Window.Background>
-        <SolidColorBrush Color="#006fb9"/>
-    </Window.Background>
-    <Window.Resources>
-        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
-    </Window.Resources>
-    <Window.InputBindings>
-        <KeyBinding Command="{Binding F1Command}" Key="F1"/>
-        <KeyBinding Command="{Binding F5Command}" Key="F5"/>
-        <KeyBinding Command="{Binding F4Command}" CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" Key="F4"/>
-    </Window.InputBindings>
-    <StackPanel>
-        <Grid HorizontalAlignment="Center">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="450" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition  Height="200"/>
-                <RowDefinition Height="50"  />
-                <RowDefinition Height="50"  />
-
-            </Grid.RowDefinitions>
-
-            <Separator Width="30" Background="Transparent"/>
-            <GroupBox  Width="450"  Height="135" Grid.Column="0" Grid.Row="0" >
-                <GroupBox.Header>
-                    <Label Foreground="White">DURACIÓN DEL PROCESO</Label>
-                </GroupBox.Header>
-                <Border CornerRadius="6" BorderBrush="#f8f9fa" Background="#f8f9fa" BorderThickness="2" DockPanel.Dock="Top">
-                    <StackPanel >
-                        <Separator Width="50" Background="Transparent"/>
-                        <DockPanel>
-                            <Label Content="HORA INICIO:"/>
-                            <Label Name="lbInicio" Content="{Binding HoraInicio}"/>
-                        </DockPanel>
-                        <Separator Width="50" Background="Transparent"/>
-                        <DockPanel>
-                            <Label Content="HORA FINAL:"/>
-                            <Label Name="lbFinal" Content="{Binding HoraFinal}"/>
-                        </DockPanel>
-                        <Separator Width="50" Background="Transparent"/>
-
-                    </StackPanel>
-                </Border>
-            </GroupBox>
-
-            <Button  Content="INICIAR" Width="125" Height="25"   
-                     Grid.Column="0" Grid.Row="1" Command="{Binding IniciarProcesoCommand}" RenderTransformOrigin="1,1">
-                <Button.Resources>
-                    <Style TargetType="Border">
-                        <Setter Property="CornerRadius" Value="5"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
-
-        </Grid>
-        <ToolBar ToolBarTray.IsLocked="True" HorizontalAlignment="Stretch"  >
-            <ToolBar.Resources>
-                <Style TargetType="{x:Type ToolBarPanel}">
-                    <Setter Property="Orientation" Value="Vertical"/>
-                </Style>
-            </ToolBar.Resources>
-            <DockPanel>
-                <Label FontSize="10" HorizontalAlignment="Right" Content="F5-INICIAR    F1-AYUDA    F4-SALIR" ></Label>
-            </DockPanel>
-        </ToolBar>
-    </StackPanel>
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Nomina Rinku"  Height="500" Width="800">
+    <Grid>
+        <Menu>
+            <MenuItem Header="Employee" Click="Employee_Click"/>
+            <MenuItem Header="Movements" Click="Movements_Click"/>
+            <MenuItem Header="Payments" Click="Payments_Click"/>
+        </Menu>
+    </Grid>
 </Window>

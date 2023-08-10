@@ -48,6 +48,43 @@ namespace WPF_Rinku.Services
             }
             return result;
         }
+
+        public async Task<string> SaveEmployee()
+        {
+            string result = string.Empty;
+            ConsumirApiRest ejecutarApi = new ConsumirApiRest();
+            try
+            {
+                string url = ConfigurationManager.AppSettings["UrlService"].ToString();
+                string controller = "Employee/";
+                string parametros = 1.ToString();
+                string method = "GetEmployeeById/" + parametros;
+
+
+                var resultado = await ejecutarApi.ExecuteApiGetData(url, controller, method);
+
+                switch (resultado)
+                {
+                    case "OK":
+                        result = "OK";
+                        break;
+                    default:
+                        result = "ErrorEnDB";
+                        break;
+                }
+            }
+            catch (HttpRequestException)
+            {
+                result = "ErrorApi";
+            }
+            catch (Exception ex)
+            {
+
+                result = ex.Message.ToString();
+
+            }
+            return result;
+        }
         public string Info()
         {
             string result = string.Empty;

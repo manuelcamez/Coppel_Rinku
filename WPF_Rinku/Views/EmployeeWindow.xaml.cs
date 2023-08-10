@@ -12,18 +12,15 @@ using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WPF_Rinku.Views;
 
-namespace WPF_Rinku
+namespace WPF_Rinku.Views
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para EmployeeWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EmployeeWindow : Window
     {
-      
         private ViewModel.ViewModel _vm; private const uint WS_EX_CONTEXTHELP = 0x00000400;
         private const uint WS_MINIMIZEBOX = 0x00020000; private const uint WS_MAXIMIZEBOX = 0x00010000;
         private const int GWL_STYLE = -16; private const int GWL_EXSTYLE = -20;
@@ -44,8 +41,8 @@ namespace WPF_Rinku
             SetWindowPos(hwnd, IntPtr.Zero, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE | SWP_NOZORDER | SWP_FRAMECHANGED); ((HwndSource)PresentationSource.FromVisual(this)).AddHook(HelpHook);
         }
         private IntPtr HelpHook(IntPtr hwnd, int msg,
-                IntPtr wParam,
-                IntPtr lParam, ref bool handled)
+               IntPtr wParam,
+               IntPtr lParam, ref bool handled)
         {
             if (msg == WM_SYSCOMMAND &&
                     ((int)wParam & 0xFFF0) == SC_CONTEXTHELP)
@@ -71,33 +68,11 @@ namespace WPF_Rinku
                 var wh = new Help(resJSON); wh.ShowDialog();
             }
         }
-        private void Employee_Click(object sender, RoutedEventArgs e)
-        {
-            // Abre la vista de Employee (página Employee.xaml)
-            EmployeeWindow employeeWindow = new EmployeeWindow();
-            employeeWindow.Show();
-        }
-
-        private void Movements_Click(object sender, RoutedEventArgs e)
-        {
-            // Abre la vista de Movements (página Movements.xaml)
-            MovementsWindow movementsWindow = new MovementsWindow();
-            movementsWindow.Show();
-        }
-
-        private void Payments_Click(object sender, RoutedEventArgs e)
-        {
-            // Abre la vista de Payments (página Payments.xaml)
-            PaymentsWindow paymentsWindow = new PaymentsWindow();
-            paymentsWindow.Show();
-        }
-
-        public MainWindow()
+        public EmployeeWindow()
         {
             InitializeComponent();
             _vm = new ViewModel.ViewModel();
             DataContext = _vm;
         }
-    
     }
 }

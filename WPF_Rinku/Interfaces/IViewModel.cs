@@ -11,6 +11,8 @@ namespace WPF_Rinku.Interfaces
     {
         bool PuedeIniciarProceso { get; }
         void IniciarProceso();
+        bool PuedeSaveEmployee { get; }
+        void SaveEmployee();
         bool PuedeF5 { get; }
         void F5();
         bool PuedeF4 { get; }
