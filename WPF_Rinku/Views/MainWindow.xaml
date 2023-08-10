@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
         xmlns:local="clr-namespace:WPF_Rinku" 
         mc:Ignorable="d" 
-       Title="GENERACIÓN DE REPORTE SALDOS CUENTAS PERDIDAS NEGOCIOS AFILIADOS" Height="370" Width="570" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+       Title="Nomina Rinku" Height="370" Width="570" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Window.Background>
         <SolidColorBrush Color="#006fb9"/>
     </Window.Background>
