@@ -61,3 +61,4 @@
 *.exe
 *.config
 *.pdb
+/WPF_Rinku/obj/Debug/Views/EmployeeWindow.g.i.cs
