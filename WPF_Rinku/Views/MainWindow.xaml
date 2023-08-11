@@ -1,7 +1,7 @@
 ﻿<Window x:Class="WPF_Rinku.MainWindow"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Nomina Rinku"  Height="500" Width="800">
+        Title="Paysheet Rinku"  Height="500" Width="800">
     <Grid>
         <Menu>
             <MenuItem Header="Employee" Click="Employee_Click"/>

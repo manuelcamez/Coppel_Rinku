@@ -12,6 +12,7 @@ using System.Windows.Input;
 using WPF_Rinku.Commands;
 using WPF_Rinku.Commants;
 using WPF_Rinku.Interfaces;
+using WPF_Rinku.Models;
 using WPF_Rinku.Services;
 using WPF_Rinku.Views;
 
@@ -29,6 +30,8 @@ namespace WPF_Rinku.ViewModel
         
 
         private Services.Services _service;
+        //private object cmpRol;
+
         public bool PuedeIniciarProceso => true;
         public bool PuedeSaveEmployee => true;
         public bool PuedeF1 => true;
@@ -46,6 +49,8 @@ namespace WPF_Rinku.ViewModel
         public ICommand F1Command { get; set; }
         public ICommand F5Command { get; set; }
         public ICommand F4Command { get; set; }
+
+       
 
         public ViewModel()
         {
@@ -65,7 +70,6 @@ namespace WPF_Rinku.ViewModel
         public async void IniciarProceso()
         {
             await EjecutarComando();
-            
         }
         public async void SaveEmployee()
         {
@@ -98,6 +102,7 @@ namespace WPF_Rinku.ViewModel
                 wh.ShowDialog();
             }
         }
+
 
         public async Task EjecutarComando()
         {

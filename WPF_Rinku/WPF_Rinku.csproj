@@ -68,6 +68,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Commands\SaveEmployeeCommand.cs" />
+    <Compile Include="Models\EmpleadoInfoRequest.cs" />
+    <Compile Include="Models\RolInfo.cs" />
+    <Compile Include="Models\EmpleadoInfo.cs" />
     <Compile Include="Views\MovementsWindow.xaml.cs">
       <DependentUpon>MovementsWindow.xaml</DependentUpon>
     </Compile>

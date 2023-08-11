@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CalculateSalaryAndCompensation" xml:space="preserve">
+    <value>CalculateSalaryAndCompensation</value>
+  </data>
   <data name="GetAll_Months" xml:space="preserve">
     <value>GetAll_Months</value>
   </data>
@@ -126,6 +129,15 @@
   <data name="Get_EmployeeById" xml:space="preserve">
     <value>Get_EmployeeById</value>
   </data>
+  <data name="Get_MovementById" xml:space="preserve">
+    <value>Get_MovementById</value>
+  </data>
+  <data name="Inactivate_Employee" xml:space="preserve">
+    <value>Inactivate_Employee</value>
+  </data>
+  <data name="Inactivate_Movement" xml:space="preserve">
+    <value>Inactivate_Movement</value>
+  </data>
   <data name="Save_Employee" xml:space="preserve">
     <value>Save_Employee</value>
   </data>
@@ -134,5 +146,8 @@
   </data>
   <data name="Update_Employee" xml:space="preserve">
     <value>Update_Employee</value>
+  </data>
+  <data name="Update_Movement" xml:space="preserve">
+    <value>Update_Movement</value>
   </data>
 </root>
