@@ -69,6 +69,9 @@
     </ApplicationDefinition>
     <Compile Include="Commands\SaveEmployeeCommand.cs" />
     <Compile Include="Models\EmpleadoInfoRequest.cs" />
+    <Compile Include="Models\MonthInfo.cs" />
+    <Compile Include="Models\MovementInfo.cs" />
+    <Compile Include="Models\MovementInfoRequest.cs" />
     <Compile Include="Models\RolInfo.cs" />
     <Compile Include="Models\EmpleadoInfo.cs" />
     <Compile Include="Views\MovementsWindow.xaml.cs">

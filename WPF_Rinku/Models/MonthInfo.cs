@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace WPF_Rinku.Models
 {
-    public class EmpleadoInfoRequest
+    public class MonthInfo
     {
-        public Int64 Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
-        public decimal HourlyWage { get; set; }
-        public Int64 RolId { get; set; }
-        public string Rol { get; set; }
     }
 }

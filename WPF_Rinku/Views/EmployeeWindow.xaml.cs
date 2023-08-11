@@ -110,7 +110,7 @@ namespace WPF_Rinku.Views
                     }
                     else
                     {
-                        MessageBox.Show("Error al cargar los datos de la API.");
+                        MessageBox.Show("Error loading API data.");
                     }
                 }
             }
@@ -283,13 +283,13 @@ namespace WPF_Rinku.Views
                     }
                     else
                     {
-                        MessageBox.Show("Error al guardar el empleado en la API.");
+                        MessageBox.Show("Failed to save the employee in the API.");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al enviar los datos a la API: " + ex.Message);
+                MessageBox.Show("Error sending data to API: " + ex.Message);
             }
         }
 
