@@ -19,7 +19,16 @@ namespace Services.DAO
         {
             context = new DataBaseContext();
         }
-        public EmployeeResponse SaveEmployee(string Name, double HourlyWage, Int64 RolId)
+
+        /// <summary>
+        /// Servicio para guardar un Employee
+        /// </summary>
+        /// <param name="Name"></param>
+        /// <param name="HourlyWage"></param>
+        /// <param name="RolId"></param>
+        /// <returns></returns>
+        /// <exception cref="DataException"></exception>
+        public EmployeeResponse SaveEmployee(string Name, Decimal HourlyWage, Int64 RolId)
         {
             List <EmployeeResponse> EmployeeData = new List <EmployeeResponse>();
             try 
@@ -60,7 +69,16 @@ namespace Services.DAO
             return EmployeeData.FirstOrDefault();
         }
 
-        public void UpdateEmployeeById(Int64 Id, string Name, double HourlyWage, Int64 RolId)
+
+        /// <summary>
+        /// Servicio para actualizar un empleado
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <param name="Name"></param>
+        /// <param name="HourlyWage"></param>
+        /// <param name="RolId"></param>
+        /// <exception cref="DataException"></exception>
+        public void UpdateEmployeeById(Int64 Id, string Name, decimal HourlyWage, Int64 RolId)
         {
             try
             {
@@ -98,6 +116,40 @@ namespace Services.DAO
             }
         }
 
+        /// <summary>
+        /// Servicio para inactivar un empleado
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <exception cref="DataException"></exception>
+        public void InactiveEmployeeById(Int64 Id)
+        {
+            try
+            {
+                var command = context.Database.Connection.CreateCommand(); command.CommandText = SP.Inactivate_Employee;
+                command.CommandType = CommandType.StoredProcedure;
+
+                var parameter0 = command.CreateParameter();
+                parameter0.ParameterName = "@Id";
+                parameter0.Value = Id;
+                command.Parameters.Add(parameter0);
+
+                command.CommandTimeout = 32767;
+                context.Database.Connection.Open();
+                var reader = command.ExecuteReader();
+
+            }
+            catch (Exception e)
+            {
+                throw new DataException();
+            }
+        }
+
+        /// <summary>
+        /// Servicio para Obtener datos de un empleado por Id
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
+        /// <exception cref="DataException"></exception>
         public EmployeeResponse GetEmployeeById(Int64 Id)
         {
             List<EmployeeResponse> EmployeeData = new List<EmployeeResponse>();

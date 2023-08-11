@@ -61,11 +61,29 @@ namespace Services.StoredProcedures {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a CalculateSalaryAndCompensation.
+        /// </summary>
+        internal static string CalculateSalaryAndCompensation {
+            get {
+                return ResourceManager.GetString("CalculateSalaryAndCompensation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Get_EmployeeById.
         /// </summary>
         internal static string Get_EmployeeById {
             get {
                 return ResourceManager.GetString("Get_EmployeeById", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Get_MovementById.
+        /// </summary>
+        internal static string Get_MovementById {
+            get {
+                return ResourceManager.GetString("Get_MovementById", resourceCulture);
             }
         }
         
@@ -84,6 +102,24 @@ namespace Services.StoredProcedures {
         internal static string GetAll_Rol {
             get {
                 return ResourceManager.GetString("GetAll_Rol", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Inactivate_Employee.
+        /// </summary>
+        internal static string Inactivate_Employee {
+            get {
+                return ResourceManager.GetString("Inactivate_Employee", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Inactivate_Movement.
+        /// </summary>
+        internal static string Inactivate_Movement {
+            get {
+                return ResourceManager.GetString("Inactivate_Movement", resourceCulture);
             }
         }
         
@@ -111,6 +147,15 @@ namespace Services.StoredProcedures {
         internal static string Update_Employee {
             get {
                 return ResourceManager.GetString("Update_Employee", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Update_Movement.
+        /// </summary>
+        internal static string Update_Movement {
+            get {
+                return ResourceManager.GetString("Update_Movement", resourceCulture);
             }
         }
     }

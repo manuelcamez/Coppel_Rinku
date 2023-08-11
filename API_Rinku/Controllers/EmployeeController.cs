@@ -1,4 +1,5 @@
 ﻿using CommonBase.Helpers;
+using Contracts.Request;
 using Services.DomainObject;
 using Services.Manager;
 using System;
@@ -14,7 +15,7 @@ namespace API_Rinku.Controllers
     {
 
         [HttpPost]
-        public ApiResponse SaveEmployee(string Name, double HourlyWage, Int64 RolId)
+        public ApiResponse SaveEmployee(EmployeeRequest employee)
         {
             
             var response = new ApiResponse();
@@ -22,8 +23,9 @@ namespace API_Rinku.Controllers
             EmployeeManager manager = new EmployeeManager();
             try 
             {
-                var data = manager.SaveEmployee(Name, HourlyWage, RolId);
-                response.Message = data.Name;
+                var data = manager.SaveEmployee(employee.Name, employee.HourlyWage, employee.RolId);
+                response.Message = "OK";
+                response.Data = data;
                 response.IsError = false;
             }
             catch (Exception ex) {
@@ -34,14 +36,34 @@ namespace API_Rinku.Controllers
         }
 
         [HttpPut]
-        public ApiResponse UpdateEmployeeById(Int64 Id, string Name, double HourlyWage, Int64 RolId)
+        public ApiResponse UpdateEmployeeById(EmployeeRequest employee)
         {
             var response = new ApiResponse();
 
             EmployeeManager manager = new EmployeeManager();
             try
             {
-                manager.UpdateEmployeeById(Id, Name, HourlyWage, RolId);
+                manager.UpdateEmployeeById(employee.Id, employee.Name, employee.HourlyWage, employee.RolId);
+                response.Message = "OK";
+                response.IsError = false;
+            }
+            catch (Exception ex)
+            {
+                response.IsError = true;
+                response.Message = ex.Message;
+            }
+            return response;
+        }
+
+        [HttpPut]
+        public ApiResponse InactiveEmployeeById(Int64 Id)
+        {
+            var response = new ApiResponse();
+
+            EmployeeManager manager = new EmployeeManager();
+            try
+            {
+                manager.InactiveEmployeeById(Id);
                 response.Message = "OK";
                 response.IsError = false;
             }
