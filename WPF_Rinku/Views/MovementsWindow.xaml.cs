@@ -169,7 +169,7 @@ namespace WPF_Rinku.Views
                         MovementInfo.ItemsSource = null;
                         MovementInfo.ItemsSource = movemenths;
 
-                        txtName.Clear();
+                        //txtName.Clear();
 
                         await EnviarDatosAPI(newMovement);
                     }
@@ -281,18 +281,36 @@ namespace WPF_Rinku.Views
                     if (response.IsSuccessStatusCode)
                     {
                         string responseContent = await response.Content.ReadAsStringAsync();
-
+                       
 
                         if (movement.Id > 0)
                         {
                             /*Si trae Id es Un Update*/
-                            LimpiarCampos();
+                            //LimpiarCampos();
                             MessageBox.Show("Movement Update to API successfully.");
                         }
                         else
                         {
+                            var dataReturn = JObject.Parse(responseContent).SelectToken("Data");
+                            if (dataReturn.Count() > 0)
+                            {
+                                var movementRet = dataReturn.ToObject<MovementInfoRequest>();
+                                //EmpleadoInfo employee = JsonConvert.DeserializeObject<EmpleadoInfo>(data);
+                                //txtName.Text = $"Nombre: {employee.Name}\nEmail: {employee.Email}\nTeléfono: {employee.Phone}";
+                                txtMovementId.Text = movementRet.Id.ToString();
+                                //txtEmployeeId.Text = movementRet.EmployeeId.ToString();
+                                //txtName.Text = movementRet.EmployeeName;
+                                //txtRol.Text = movementRet.Rol;
+                                //cmbMonth.SelectedValue = movementRet.MonthId;
+                                //txtDeliveryQuantity.Text = movementRet.DeliveryQuantity.ToString();
+                            }
+                            else
+                            {
+                                LimpiarCampos();
+                                MessageBox.Show("Movement not found.");
+                            }
                             /*Si no trae Id es Un Save*/
-                            LimpiarCampos();
+                            //LimpiarCampos();
                             MessageBox.Show("Movement saved to API successfully.");
                         }
 
@@ -424,8 +442,13 @@ namespace WPF_Rinku.Views
                 return await response.Content.ReadAsStringAsync();
             }
         }
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            LimpiarCampos();
+        }
         private void LimpiarCampos()
         {
+            txtMovementId.Text = string.Empty;
             txtEmployeeId.Text = string.Empty;
             txtName.Text = string.Empty;
             txtRol.Text = string.Empty;

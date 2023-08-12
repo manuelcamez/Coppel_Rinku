@@ -8,7 +8,6 @@ C:\Users\Camez\source\repos\Coppel_Rinku_V1\WPF_Rinku\obj\Debug\Views\MovementsW
 C:\Users\Camez\source\repos\Coppel_Rinku_V1\WPF_Rinku\obj\Debug\Views\PaymentsWindow.g.cs
 C:\Users\Camez\source\repos\Coppel_Rinku_V1\WPF_Rinku\obj\Debug\App.g.cs
 C:\Users\Camez\source\repos\Coppel_Rinku_V1\WPF_Rinku\obj\Debug\WPF_Rinku_MarkupCompile.cache
-C:\Users\Camez\source\repos\Coppel_Rinku_V1\WPF_Rinku\obj\Debug\WPF_Rinku_MarkupCompile.lref
 C:\Users\Camez\source\repos\Coppel_Rinku_V1\WPF_Rinku\obj\Debug\Views\EmployeeWindow.baml
 C:\Users\Camez\source\repos\Coppel_Rinku_V1\WPF_Rinku\obj\Debug\Views\EmployeeWindow.g.cs
 C:\Users\Camez\source\repos\Coppel_Rinku_V1\WPF_Rinku\bin\Debug\WPF_Rinku.exe.config

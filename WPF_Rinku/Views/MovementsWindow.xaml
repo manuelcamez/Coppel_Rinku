@@ -59,6 +59,14 @@
                 </Button.Resources>
             </Button>
             <Border x:Name="barSeparador" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="5" Margin="0,41,0,0" VerticalAlignment="Top" Width="519" Background="White"/>
+            <Button  Content="Clear" Click="Clear_Click" Height="25"   
+                RenderTransformOrigin="1,1" Margin="302,216,206,44">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </Grid>
 
     </StackPanel>

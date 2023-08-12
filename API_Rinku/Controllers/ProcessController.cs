@@ -34,6 +34,7 @@ namespace API_Rinku.Controllers
             return response;
         }
 
+        [HttpGet]
         public ApiResponse GetMovementById(Int64 Id)
         {
             var response = new ApiResponse();
@@ -94,9 +95,13 @@ namespace API_Rinku.Controllers
             return response;
         }
 
-        [HttpPut]
-        public ApiResponse CalculateSalaryAndCompensation(CalculationRequest movements)
+        [HttpGet]
+        public ApiResponse CalculateSalaryAndCompensation(Int64 EmployeeId, int MonthId)
         {
+            CalculationRequest movements = new CalculationRequest();
+
+            movements.EmployeeId = EmployeeId;
+            movements.MonthId = MonthId;    
             var response = new ApiResponse();
 
             ProcessManager manager = new ProcessManager();

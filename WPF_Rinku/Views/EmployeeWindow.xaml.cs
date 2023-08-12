@@ -153,9 +153,9 @@ namespace WPF_Rinku.Views
                         EmpleadoInfo.ItemsSource = null;
                         EmpleadoInfo.ItemsSource = empleados;
 
-                        txtName.Clear();
-                        txtHourlyWage.Clear();
-                        cmbRol.SelectedIndex = -1;
+                        //txtName.Clear();
+                        //txtHourlyWage.Clear();
+                        //cmbRol.SelectedIndex = -1;
 
                         await EnviarDatosAPI(nuevoEmpleado);
                     }
@@ -267,8 +267,7 @@ namespace WPF_Rinku.Views
                     if (response.IsSuccessStatusCode)
                     {
                         string responseContent = await response.Content.ReadAsStringAsync();
-
-                        
+                      
                         if (empleado.Id > 0)
                         {
                             /*Si trae Id es Un Update*/
@@ -276,6 +275,22 @@ namespace WPF_Rinku.Views
                         }
                         else
                         {
+                            var dataReturn = JObject.Parse(responseContent).SelectToken("Data");
+                            if (dataReturn.Count() > 0)
+                            {
+                                var employee = dataReturn.ToObject<EmpleadoInfoRequest>();
+                                //EmpleadoInfo employee = JsonConvert.DeserializeObject<EmpleadoInfo>(data);
+                                //txtName.Text = $"Nombre: {employee.Name}\nEmail: {employee.Email}\nTeléfono: {employee.Phone}";
+                                txtEmployeeId.Text = employee.Id.ToString();
+                                txtName.Text = employee.Name;
+                                txtHourlyWage.Text = employee.HourlyWage.ToString();
+                                cmbRol.SelectedValue = employee.RolId;
+                            }
+                            else
+                            {
+                                LimpiarCampos();
+                                MessageBox.Show("user not found.");
+                            }
                             /*Si no trae Id es Un Save*/
                             MessageBox.Show("Employee saved to API successfully.");
                         }
@@ -352,6 +367,12 @@ namespace WPF_Rinku.Views
                 return await response.Content.ReadAsStringAsync();
             }
         }
+
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            LimpiarCampos();
+        }
+
         private void LimpiarCampos()
         {
             txtName.Text = string.Empty;
